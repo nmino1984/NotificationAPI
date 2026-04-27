@@ -1,0 +1,6 @@
+{
+  "build": {
+    "builder": "dockerfile"
+  },
+  "start": "dotnet NotificationAPI.API.dll"
+}

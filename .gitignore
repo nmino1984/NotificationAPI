@@ -1,0 +1,12 @@
+bin/
+obj/
+*.db
+*.db-shm
+*.db-wal
+.env
+.vs/
+.vscode/
+*.user
+*.suo
+logs/
+NotificationAPI/
