@@ -11,9 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddEndpointsApiExplorer();
-
-builder.Services.AddSwaggerGen();
+// builder.Services.AddEndpointsApiExplorer();
+// builder.Services.AddSwaggerGen();
 
 // ── DATABASE ─────────────────────────────────────────────────────────────
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
@@ -47,10 +46,8 @@ var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    // UseSwagger() JSON in /swagger/v1/swagger.json
-    app.UseSwagger();
-    // UseSwaggerUI() serves the visual interface at /swagger
-    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "NotificationAPI v1"));
+    // app.UseSwagger();
+    // app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "NotificationAPI v1"));
 }
 
 // Redirect HTTP to HTTPS automatically
